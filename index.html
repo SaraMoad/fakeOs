@@ -5,10 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styling/styles.css">
-    <script defer src="./script.js"></script>
+    <script defer src="./scripts/dateTime.js"></script>
+    <script defer src="./scripts/calanderModal.js"></script>
+    <script defer src="./scripts/galleryModal.js"></script>
+    <script defer src="./scripts/noteModal.js"></script>
+    <!-- <a target="_blank" href="https://icons8.com/icon/11116/spotify">Spotify</a> icon by <a target="_blank"
+        href="https://icons8.com">Icons8</a> -->
+        <!-- <a target="_blank" href="https://icons8.com/icon/63785/chrome">Chrome</a> icon by <a target="_blank"
+            href="https://icons8.com">Icons8</a> -->
     <title>FakeOs</title>
 </head>
 <body>
-    
+    <header>
+        <div class="navBar__container">
+            <button class="navBar__button">
+                <img src="./images/icons/navbar/appleLogo.png"/>
+            </button>
+            <button class="navBar__button__application">Finder</button>
+            <button class="navBar__button">File</button>
+            <button class="navBar__button">Edit</button>
+            <button class="navBar__button">View</button>
+            <button class="navBar__button">Go</button>
+            <button class="navBar__button">Window</button>
+            <button class="navBar__button">Help</button>  
+        </div>
+        <div class="navBar__container">
+            <button class="navBar__button">
+                <img class="navBar__button__icon" src="./images/icons/navbar/battery.png" />
+            </button>
+            <button class="navBar__button">
+                <img src="./images/icons/navbar/wifiIcon.png"/>
+            </button>
+            <button class="navBar__button">
+                <img src="/images/icons/navbar/searchIcon.png"/>
+            </button>
+            <button class="navBar__button">
+                <img src="/images/icons/navbar/menuItem.png"/>
+            </button>
+            <p id="date"></p>
+            <p id="time"></p>
+        </div>
+    </header>
+    <div class ="calendar__modal"></div>
+    <div class="note_modal"></div>
+    <div class="gallery_modal"></div>
+    <footer>
+            <div class="dock__container">
+                <img  src="./images/icons/dock/finder.png"/>
+                <img src="./images/icons/dock/launchPad.png"/>
+                <img src="./images/icons/dock/mail.png"/>
+                <img id="img__sizing" src="./images/icons/dock/chrome.png" alt=""/>
+                <img src="./images/icons/dock/messengerIcon.png" alt=""/>
+                <img id="img__sizing" src="./images/icons/dock/spotifyBlack.png" alt=""/>
+                <img src="./images/icons/dock/calendar.png" alt=""/>
+                <img src="./images/icons/dock/vsCode.png"/>
+                <img id="#app__notes" src="./images/icons/dock/notes.png" />
+                <img src="./images/icons/dock/textEdit.png" alt="">
+                <img src="./images/icons/dock/photos.png" alt="">
+            </div>
+            <div class="dock__container">
+                <div class="dock__container__seperator"></div>
+                <img src="./images/icons/dock/folderIcon.png"/>
+                <img src="./images/icons/dock/trashEmpty.png" alt="">
+            </div>
+    </footer>
 </body>
 </html>
