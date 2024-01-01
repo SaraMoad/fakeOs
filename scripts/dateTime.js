@@ -11,7 +11,7 @@ const setTime = () => {
     currentTime = currentTime.replace("0", "");
   }
 
-  document.querySelector("#time").textContent = currentTime;
+  document.querySelector("#navBarTime").textContent = currentTime;
 };
 
 const getDay = () => {
@@ -59,7 +59,7 @@ const updateDate = () => {
 
   let currentDate = date.concat(" ", currentDay).split(" ").reverse().join(" ");
 
-  document.querySelector("#date").textContent = currentDate;
+  document.querySelector("#navBarDate").textContent = currentDate;
 };
 
 updateDate();
