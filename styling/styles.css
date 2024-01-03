@@ -30,7 +30,7 @@
   width: 200px;
   justify-content: space-between;
   align-items: center;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   padding: 5px;
 }
 
@@ -65,9 +65,9 @@
 }
 
 #exitButton {
-  background-color: #FF5F57;
+  background-color: #ff5f57;
   float: right;
-  border: solid 1px #FF5F57;
+  border: solid 1px #ff5f57;
   text-align: center;
   font-size: 12px;
   border-radius: 50%;
@@ -144,7 +144,7 @@
   text-decoration: none;
   padding-left: 10px;
   font-size: 12px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .library {
@@ -177,13 +177,13 @@
 
 .gallery__header {
   display: flex;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 #galleryExit {
-  background-color: #FF5F57;
+  background-color: #ff5f57;
   float: right;
-  border: solid 1px #FF5F57;
+  border: solid 1px #ff5f57;
   text-align: center;
   font-size: 12px;
   border-radius: 50%;
@@ -215,7 +215,7 @@
   height: 500px;
   justify-content: flex-start;
   align-items: flex-start;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-top: solid 1px #dad9d9;
   border-right: solid 1px #dad9d9;
   padding: 5px;
@@ -260,9 +260,9 @@
 }
 
 #NoteModalClose {
-  background-color: #FF5F57;
+  background-color: #ff5f57;
   float: right;
-  border: solid 1px #FF5F57;
+  border: solid 1px #ff5f57;
   text-align: center;
   font-size: 12px;
   border-radius: 50%;
@@ -313,11 +313,12 @@
 }
 
 * {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 body {
-  background-image: url("/images/sonomaHorizens.jpeg");
+  background-image: url("./images/sonomaHorizens.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -344,7 +345,8 @@ header .navBar__container {
   margin: 0px 10px 0px 10px;
   gap: 5px;
 }
-header .navBar__button, header .navBar__button__application {
+header .navBar__button,
+header .navBar__button__application {
   display: flex;
   border: none;
   background-color: #fdfdfd;
@@ -357,11 +359,13 @@ header .navBar__button__icon {
 header .navBar__button__application {
   font-weight: bold;
 }
-header .navBar__button:focus, header .navBar__button__application:focus {
+header .navBar__button:focus,
+header .navBar__button__application:focus {
   background-color: #b3b3b3;
 }
 
-#navBarDate, #navBarTime {
+#navBarDate,
+#navBarTime {
   display: flex;
   font-size: small;
   padding: 0;
@@ -383,14 +387,15 @@ footer {
   display: flex;
   backdrop-filter: blur(12px);
   box-shadow: 2px 2px 4px;
-  background-color: color-mix(in srgb, #1A1A1A 46%, #F6F6F6 36%);
+  background-color: color-mix(in srgb, #1a1a1a 46%, #f6f6f6 36%);
   border-radius: 15px;
   margin-left: 40px;
   margin-right: 40px;
   justify-content: space-between;
 }
 
-.dock__container, .dock__container__seperator {
+.dock__container,
+.dock__container__seperator {
   mix-blend-mode: normal;
   display: flex;
   flex-direction: row;
@@ -401,11 +406,12 @@ footer {
 }
 .dock__container__seperator {
   margin: 5px 0px 5px 0px;
-  border-left: solid 1px #1A1A1A;
+  border-left: solid 1px #1a1a1a;
   border-radius: 1px;
   height: 42px;
 }
-.dock__container img, .dock__container__seperator img {
+.dock__container img,
+.dock__container__seperator img {
   height: 52px;
   width: 52px;
   margin: 0;
