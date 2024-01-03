@@ -20,10 +20,14 @@ const menuOptionsRender = `<button class="apple__menu__item">
 
 let menu = document.getElementById("apple__menu");
 
+window.addEventListener("load", (event) => {
+  event.preventDefault();
+  menu.innerHTML = `${menuOptionsRender}`;
+});
+
 apple.addEventListener("click", (event) => {
   event.preventDefault();
   menu.style.display = menu.style.display === "none" ? "flex" : "none";
-  menu.innerHTML = `${menuOptionsRender}`;
 });
 
 // Would like to figure out how to close it without hitting the same button.

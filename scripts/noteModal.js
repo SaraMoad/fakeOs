@@ -1,26 +1,19 @@
+import { addTextElement } from "./modules/appFunctions.js";
 const noteApp = document.images.namedItem("appNotes");
 const modal = document.getElementById("noteModal");
 const modalSelector = document.querySelector("#noteModal");
 
-const addTextElement = (elementType, text, parent, cls) => {
-  const newElement = document.createElement(elementType);
-  const newText = document.createTextNode(text);
-  newElement.classList.add(cls);
-  newElement.appendChild(newText);
-  parent.appendChild(newElement);
-};
-
 const noteRender = () => {
-  const container = document.createElement("div");
-  container.classList.add("note__container");
-  modalSelector.appendChild(container);
+  const noteContainer = document.createElement("div");
+  noteContainer.classList.add("note__container");
+  modalSelector.appendChild(noteContainer);
 
   const list = document.createElement("li");
   list.classList.add("note__list");
-  container.appendChild(list);
+  noteContainer.appendChild(list);
 
   const exit = document.createElement("button");
-  exit.setAttribute("id", "exit");
+  exit.setAttribute("id", "NoteModalClose");
   list.appendChild(exit);
 
   const listItem = document.createElement("ul");
@@ -31,7 +24,7 @@ const noteRender = () => {
 
   const newNote = document.createElement("div");
   newNote.classList.add("note__text");
-  container.appendChild(newNote);
+  noteContainer.appendChild(newNote);
 
   const noteHeader = document.createElement("div");
   noteHeader.classList.add("note__header");
@@ -46,9 +39,10 @@ const noteRender = () => {
 
 noteApp.addEventListener("click", (event) => {
   event.preventDefault();
+  modal.innerHTML = "";
   noteRender();
   modal.style.display = "flex";
-  let close = document.getElementById("exit");
+  let close = document.getElementById("NoteModalClose");
 
   close.addEventListener("click", (event) => {
     event.preventDefault();

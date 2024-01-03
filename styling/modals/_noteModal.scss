@@ -1,3 +1,5 @@
+@use "./modal.scss";
+
 .note__container {
     display: flex;
     flex-direction: row;
@@ -17,7 +19,7 @@
     width:200px;
     height: 500px;
     justify-content: flex-start;
-    align-items: start;
+    align-items: flex-start;
     background-color: #FFFFFF;
     border-top: solid 1px #dad9d9;
     border-right: solid 1px #dad9d9;
@@ -25,15 +27,17 @@
 }
 
 .note__list__item {
-    width: 90%;
+    width: 100%;
     margin:0;
     padding-bottom: 5px;
     border-bottom: solid 1px #dad9d9;
     display: flex;
     justify-content: flex-start;
+    align-content: center;
     text-decoration: none;
     padding-left: 0;
     font-size: 12px;
+    text-align: left;
     font-weight: bold;
 }
 
@@ -47,6 +51,7 @@
 .note__header {
     display: flex;
     height:10%;
+    margin-left: 10px;
     width:auto;
 }
 .note__input {
@@ -56,6 +61,10 @@
     resize: none;
     border: none;
     overflow: scroll;
+}
+
+#NoteModalClose {
+    @include modal.exit();
 }
 
 #appNotes:hover {

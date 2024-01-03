@@ -1,47 +1,9 @@
+import { binFilesArr } from "./modules/binObject.js";
+import { addTextElement } from "./modules/appFunctions.js";
+
 const binApp = document.images.namedItem("appBin");
 const binModal = document.getElementById("binModal");
 const binElement = document.querySelector("#binModal");
-
-const binFilesArr = [
-  {
-    name: "test-folder",
-    icon: "folder",
-    src: "./images/icons/dock/folderIcon.png",
-    alt: `a test-folder`,
-  },
-  {
-    name: "test-folder 2",
-    icon: "folder",
-    src: "./images/icons/dock/folderIcon.png",
-    alt: `a test-folder`,
-  },
-  {
-    name: "test-folder 3",
-    icon: "folder",
-    src: "./images/icons/dock/folderIcon.png",
-    alt: `a test-folder`,
-  },
-  {
-    name: "test-document 1",
-    icon: "document",
-    src: "./images/icons/dock/document.png",
-    alt: `a test-document`,
-  },
-  {
-    name: "test-document 2",
-    icon: "document",
-    src: "./images/icons/dock/document.png",
-    alt: `a test-document`,
-  },
-];
-
-const addingTextElement = (elementType, text, parent, cls) => {
-  const newElement = document.createElement(elementType);
-  const newText = document.createTextNode(text);
-  newElement.classList.add(cls);
-  newElement.appendChild(newText);
-  parent.appendChild(newElement);
-};
 
 const binRender = () => {
   const container = document.createElement("div");
@@ -53,14 +15,14 @@ const binRender = () => {
   container.appendChild(header);
 
   const exit = document.createElement("button");
-  exit.setAttribute("id", "exit");
+  exit.setAttribute("id", "exitButton");
   const exitButton = document.createElement("div");
   exitButton.classList.add("exit__button");
   exitButton.appendChild(exit);
   header.appendChild(exitButton);
 
   const headerText = document.createElement("div");
-  addingTextElement("h4", "Bin", headerText, "header__text");
+  addTextElement("h4", "Bin", headerText, "header__text");
   header.appendChild(headerText);
 
   const buttonDiv = document.createElement("div");
@@ -89,15 +51,16 @@ const binRender = () => {
     icon.alt = item.alt;
     icon.classList.add("bin__list__item--icon");
     listItem.appendChild(icon);
-    addingTextElement("p", `${item.name}`, listItem, "bin__list__item--title");
+    addTextElement("p", `${item.name}`, listItem, "bin__list__item--title");
   });
 };
 
 binApp.addEventListener("click", (event) => {
   event.preventDefault();
+  binModal.innerHTML = "";
   binRender();
   binModal.style.display = "flex";
-  let close = document.getElementById("exit");
+  let close = document.getElementById("exitButton");
 
   close.addEventListener("click", (event) => {
     event.preventDefault();
