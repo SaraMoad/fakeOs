@@ -5,10 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styling/styles.css">
-    <script defer src="./script.js"></script>
+    <script type="module" defer src="./scripts/dateTime.js"></script>
+    <script type="module" defer src="./scripts/binModal.js"></script>
+    <script type="module" defer type="module" src="./scripts/galleryModal.js"></script>
+    <script type="module" defer src="./scripts/noteModal.js"></script>
+    <script type="module" defer src="./scripts/navBarFunctions.js"></script>
     <title>FakeOs</title>
 </head>
 <body>
-    
+    <header>
+        <div class="navBar__container">
+            <button class="navBar__button" id="menu">
+                <img src="./images/icons/navbar/appleLogo.png"/>
+            </button>
+            <button class="navBar__button__application">Finder</button>
+            <button class="navBar__button">File</button>
+            <button class="navBar__button">Edit</button>
+            <button class="navBar__button">View</button>
+            <button class="navBar__button">Go</button>
+            <button class="navBar__button">Window</button>
+            <button class="navBar__button">Help</button>  
+        </div>
+        <div class="navBar__container">
+            <button class="navBar__button">
+                <img class="navBar__button__icon" src="./images/icons/navbar/battery.png" />
+            </button>
+            <button class="navBar__button">
+                <img src="./images/icons/navbar/wifiIcon.png" alt="wifi icon"/>
+            </button>
+            <button class="navBar__button">
+                <img src="/images/icons/navbar/searchIcon.png" alt="searchIcon"/>
+            </button>
+            <button class="navBar__button">
+                <img src="/images/icons/navbar/menuItem.png" alt="menu Item"/>
+            </button>
+            <p id="navBarDate"></p>
+            <p id="navBarTime"></p>
+        </div>
+    </header>
+    <div id="apple__menu"></div>
+    <main>
+        <div id="noteModal"> </div>
+        <div id="galleryModal"></div>
+        <div id="binModal"></div> 
+    </main>
+    <footer>
+        <div class="dock__container">
+            <img  src="./images/icons/dock/finder.png" alt="finder Icon"/>
+            <img src="./images/icons/dock/launchPad.png" alt="launchpad Icon"/>
+            <img src="./images/icons/dock/mail.png" alt="Mail Icon"/>
+            <img id="img__sizing" src="./images/icons/dock/chrome.png" alt="chrome Icon"/>
+            <img src="./images/icons/dock/messengerIcon.png" alt="messenger Icon"/>
+            <img id="img__sizing" src="./images/icons/dock/spotifyBlack.png" alt="spotify icon"/>
+            <img src="./images/icons/dock/calendar.png" alt="calendar icon"/>
+            <img src="./images/icons/dock/vsCode.png" alt="vs code icon"/>
+            <img id="appNotes" src="./images/icons/dock/notes.png" alt="notes icon"/>
+            <img src="./images/icons/dock/textEdit.png" alt=" textEdit icon">
+            <img id="appPhotos" src="./images/icons/dock/photos.png" alt="photos icon">
+        </div>
+        <div class="dock__container">
+            <div class="dock__container__seperator"></div>
+            <img src="./images/icons/dock/folderIcon.png" alt="downloads"/>
+            <img id="appBin" src="./images/icons/dock/trashEmpty.png" alt="trashBin">
+        </div>
+    </footer>
 </body>
 </html>
+
+<!-- icons used from Icons8 -->

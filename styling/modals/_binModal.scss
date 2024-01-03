@@ -1,0 +1,95 @@
+@use "./modal.scss";
+
+.bin__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 500px;
+    height: 340px;
+    align-items: flex-start;
+    background-color: rgb(255, 255, 255);
+    border: solid 1px gray;
+    border-radius: 5px;
+}
+
+.bin__files {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-right: solid 1px #dad9d9;
+    height: 100%;
+}
+
+#binList {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+    padding: 5px;
+}
+
+.bin__list__item {
+    width: 90%;
+    margin: 0;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: flex-start;
+    text-decoration: none;
+    padding-left: 0;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+
+.bin__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 10%;
+    width: 100%;
+    align-items: center;
+    border-bottom: solid 1px #dad9d9;
+}
+
+.header__text {
+    margin: 0;
+}
+
+.exit__button {
+    margin-left: 5px;
+}
+
+#exitButton {
+    @include modal.exit()
+}
+
+.empty__button {
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    
+}
+
+#empty {
+    border: solid 1px;
+    border-radius: 5px;
+    padding: 2px;
+    display:flex;
+    font-size: 12px;
+    text-align: center;
+    &:hover {
+        cursor: pointer;
+    }
+    
+}
+
+#appBin:hover {
+    cursor: pointer;
+}
+
+.bin__list__item--icon:hover {
+    cursor: pointer;
+}
